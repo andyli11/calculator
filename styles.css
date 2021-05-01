@@ -1,0 +1,209 @@
+@font-face {
+  font-family: "cascadiacode";
+  src: url(./fonts/CascadiaCode.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: cascadiacode;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #e5ff00, #f15c75);
+  height: 100vh;
+  max-width: 100vw;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: minmax(100px, auto) repeat(4, 100px);
+  grid-template-areas:
+    "output output output output output"
+    "one two three AC DEL"
+    "four five six mul div"
+    "seven eight nine add sub"
+    "zero- dot expo equal equal";
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.5);
+  border: 20px solid #776bfd;
+  border-radius: 5%;
+}
+
+/* OUTPUT! */
+
+.output {
+  grid-area: output;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  display: grid;
+  align-content: space-between;
+  text-align: right;
+  padding: 10px;
+}
+
+.previous {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+}
+
+.current {
+  color: white;
+  font-size: 2rem;
+}
+
+/* BUTTONS! */
+
+.button1 {
+  grid-area: one;
+}
+
+.button2 {
+  grid-area: two;
+}
+
+.button3 {
+  grid-area: three;
+}
+
+.button4 {
+  grid-area: four;
+}
+
+.button5 {
+  grid-area: five;
+}
+
+.button6 {
+  grid-area: six;
+}
+
+.button7 {
+  grid-area: seven;
+}
+
+.button8 {
+  grid-area: eight;
+}
+
+.button9 {
+  grid-area: nine;
+}
+
+.button0 {
+  grid-area: zero-;
+  border-bottom-left-radius: 10px;
+}
+
+.buttonAC {
+  grid-area: AC;
+}
+
+.buttonDEL {
+  grid-area: DEL;
+}
+
+.additon {
+  grid-area: add;
+}
+
+.subtraction {
+  grid-area: sub;
+}
+
+.multiplication {
+  grid-area: mul;
+}
+
+.division {
+  grid-area: div;
+}
+
+.decimal {
+  grid-area: dot;
+}
+
+.exponent {
+  grid-area: expo;
+}
+
+.equals {
+  grid-area: equal;
+  border-bottom-right-radius: 10px;
+}
+
+.button {
+  cursor: pointer;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* MEDIA QUERY! */
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: minmax(60px, auto) repeat(5, 50px);
+    grid-template-areas:
+      "output output output output"
+      "one two three add"
+      "four five six sub"
+      "seven eight nine mul"
+      "zero- dot expo div"
+      "equal equal DEL AC";
+  }
+
+  .output {
+    padding: 5px;
+  }
+
+  .previous {
+    font-size: 0.7rem;
+  }
+
+  .current {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  .container {
+    border: 15px solid #776bfd;
+    border-radius: 8%;
+  }
+
+  .output {
+    border-top-left-radius: 5.5px;
+    border-top-right-radius: 5.5px;
+  }
+
+  .button0 {
+    border-radius: 0;
+  }
+
+  .equals {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 7px;
+  }
+
+  .buttonAC {
+    border-bottom-right-radius: 7px;
+  }
+}
