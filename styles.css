@@ -46,6 +46,7 @@ body {
   display: grid;
   align-content: space-between;
   text-align: right;
+  word-break: break-all;
   padding: 10px;
 }
 
