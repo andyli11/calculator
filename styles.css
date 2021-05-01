@@ -36,7 +36,7 @@ body {
   border-radius: 5%;
 }
 
-/* OUTPUT! */
+/* DISPLAY OUTPUT! */
 
 .output {
   grid-area: output;
@@ -160,11 +160,11 @@ body {
     grid-template-rows: minmax(60px, auto) repeat(5, 50px);
     grid-template-areas:
       "output output output output"
-      "one two three add"
-      "four five six sub"
-      "seven eight nine mul"
-      "zero- dot expo div"
-      "equal equal DEL AC";
+      "AC DEL expo add"
+      "one two three sub"
+      "four five six mul"
+      "seven eight nine div"
+      "zero- dot equal equal";
   }
 
   .output {
@@ -195,15 +195,10 @@ body {
   }
 
   .button0 {
-    border-radius: 0;
-  }
-
-  .equals {
-    border-bottom-right-radius: 0;
     border-bottom-left-radius: 7px;
   }
 
-  .buttonAC {
+  .equals {
     border-bottom-right-radius: 7px;
   }
 }
